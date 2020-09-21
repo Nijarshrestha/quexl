@@ -1,0 +1,32 @@
+@import "../../styles/globalvariable";
+
+.input--wrapper {
+    label {
+        display: block;
+        color: $primary_color;
+        font-weight: 600;
+        font-size: 1em;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+    }
+
+    input {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        border-radius: 15px;
+        outline: none;
+        border: 2px solid #d8d8d8;
+        transition: border-color 0.3s linear, opacity 0.3s linear;
+        text-align: left;
+        font-style: normal;
+        background-color: #fff;
+    }
+
+    .error--wrapper {
+        margin: 5px;
+        color: red;
+    }
+}

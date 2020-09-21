@@ -1,0 +1,18 @@
+.btn--wrapper {
+    width: 100%;
+    border-radius: 15px;
+    background-color: #3122ab;
+    color: #fff;
+    border: 0;
+    padding: 14px 25px 12px 25px;
+    font-size: 1em;
+    font-weight: 300;
+    outline: none;
+    box-shadow: none;
+    display: inline-block;
+    font-family: "Metropolis Semi", sans-serif;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: border-color 0.3s linear, background-color 0.3s linear, color 0.3s linear, transform 0.3s ease;
+}

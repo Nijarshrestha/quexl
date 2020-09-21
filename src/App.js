@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+import "./styles/_globalStyle.scss";
+import LoginPage from "./container/AuthPage/LoginPage";
+import Dashboard from "./container/Dashboard/Dashboard";
+import ErrorPage from "./container/ErrorPage/ErrorPage";
+import ProtectedRoute from "./container/ProtectedRoute";
+import Service from "./container/Service/Service";
+import axios from "axios";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path="/login" component={LoginPage} />
+        {/* <ProtectedRoute exact path="/dashboard" component={Dashboard} /> */}
+        <Route exact path="/dashboard" component={Dashboard} />
+
+        <ProtectedRoute exact path="/service" component={Service} />
+        <Route path="*" component={ErrorPage} />
+      </Switch>
     </div>
   );
 }
